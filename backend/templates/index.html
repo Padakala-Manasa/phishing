@@ -1,0 +1,75 @@
+<!-- /templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Phishing Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            background-image: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #e94560;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #16213e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #0f3460;
+            width: 200px;
+            margin: 50px auto;
+        }
+
+        input[type="text"] {
+            width: 150px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #16213e;
+            border-radius: 5px;
+            font-size: 24px;
+            color: #e94560;
+            background-color: #1a1a2e;
+        }
+
+        button[type="submit"] {
+            background-color: #00f0ff;
+            color: #1a1a2e;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            font-size: 24px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #e94560;
+            transform: scale(1.1);
+        }
+
+        button[type="submit"]:active {
+            background-color: #16213e;
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <h1>URL Phishing Prediction</h1>
+    <form action="/predict" method="POST">
+        <input type="text" name="url" placeholder="Enter URL" required>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
